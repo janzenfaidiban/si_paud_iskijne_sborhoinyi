@@ -15,7 +15,7 @@
 
                 <div class="card-body">
 
-                    <form action="./process/surat-keluar/tambah.php" method="post">
+                    <form action="./process/surat-keluar/tambah.php" method="post" enctype="multipart/form-data">
 
                         <div class="mb-3">
                             <label for="jenis_surat" class="form-label text-muted">Jenis Surat</label>
@@ -43,8 +43,8 @@
                         </div>
         
                         <div class="mb-3">
-                            <label for="gambar" class="form-label text-muted">Gambar</label>
-                            <input type="file" class="form-control">
+                            <label for="file" class="form-label text-muted">Unggah Surat (*.PDF)</label>
+                            <input type="file" id="file" name="file" class="form-control">
                         </div>
 
                         <div class="py-2">

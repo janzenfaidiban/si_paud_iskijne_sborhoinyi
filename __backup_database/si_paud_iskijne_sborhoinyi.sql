@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2022 at 02:36 PM
+-- Generation Time: Dec 10, 2022 at 04:02 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -102,15 +102,26 @@ CREATE TABLE `sarpras` (
   `id` int(11) NOT NULL,
   `nama_barang` varchar(150) NOT NULL,
   `jumlah` int(4) NOT NULL,
-  `kondisi` int(4) NOT NULL
+  `kondisi_baik` int(4) NOT NULL,
+  `kondisi_tidak_baik` int(4) NOT NULL,
+  `letak_barang` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `sarpras`
 --
 
-INSERT INTO `sarpras` (`id`, `nama_barang`, `jumlah`, `kondisi`) VALUES
-(2, 'Meja Guru', 9, 8);
+INSERT INTO `sarpras` (`id`, `nama_barang`, `jumlah`, `kondisi_baik`, `kondisi_tidak_baik`, `letak_barang`) VALUES
+(2, 'Meja Siswa', 20, 20, 0, 'Dalam Kelas'),
+(4, 'Kursis Siswa', 20, 19, 1, 'Dalam Kelas'),
+(5, 'Meja Guru', 3, 3, 0, 'Dalam Kelas'),
+(6, 'Kursi Guru', 5, 5, 0, 'Dalam Kelas'),
+(7, 'Kipas Angin', 2, 2, 0, 'Dalam Kelas'),
+(8, 'Lemari', 4, 3, 1, 'Dalam Kelas'),
+(9, 'Papan Tulis', 1, 1, 0, 'Dalam Kelas'),
+(10, 'Taplak Meja', 4, 4, 0, 'Dalam Kelas'),
+(11, 'Kotak Obat', 2, 2, 0, 'Dalam Kelas'),
+(12, 'Matras Puzzle Besar', 6, 5, 1, 'Dalam Kelas');
 
 -- --------------------------------------------------------
 
@@ -132,8 +143,15 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id`, `nama_lengkap`, `foto`, `nim`, `tmp_tgl_lahir`, `jenis_kelamin`) VALUES
-(2, 'Samuel Bosawer', '1669973499-samuelbosawer.jpg', '12345678', 'Sentani, 1 Januari 2000', 'Laki-Laki'),
-(4, 'Elly Ansek', '1669973456-ellyansek.jpg', '12345678', 'Nabire, 01 Desember 2022', 'Laki-Laki');
+(6, 'Refaya Rumbino', '', '-', 'Jayapura, 21 Februari 2017', 'Perempuan'),
+(7, 'Andrew Bilik', '', '-', 'Jayapura, 14 Februari 2016', 'Laki-Laki'),
+(8, 'Brietta Bonai', '', '-', 'Abepura, 19 Mei 2016', 'Perempuan'),
+(9, 'Destria Kambu', '', '-', 'Jayapura, 10 Oktober 2016', 'Perempuan'),
+(10, 'Aulin Dacosta', '', '-', 'Jayapura, 12 Juli 2017', 'Perempuan'),
+(11, 'Lince Dacosta', '', '-', 'Jayapura, 6 November 2017', 'Perempuan'),
+(12, 'Syalom Yoku', '', '-', 'Jayapura, 25 Desember 2017', 'Perempuan'),
+(13, 'Yoel Liu', '', '-', 'Jayapura, 13 Agustus 2016', 'Laki-Laki'),
+(14, 'Gilang Syaputra', '', '-', 'Jayapura, 3 Uuni 2016', 'Laki-Laki');
 
 -- --------------------------------------------------------
 
@@ -159,8 +177,8 @@ INSERT INTO `surat` (`id`, `jenis_surat`, `tanggal_diterima`, `tanggal_surat`, `
 (1, 'Keluar', '2022-12-01', '2022-12-01', 1234567890, 'Janzen Faidiban', 'Theis A.'),
 (2, 'Keluar', '2022-12-01', '2022-12-01', 1234567890, 'Michael Faidiban', 'Johan N.'),
 (3, 'Keluar', '2022-12-01', '2022-12-01', 1029384756, 'Samuel Bosawer', 'Samuel B.'),
-(4, 'Masuk', '2022-12-08', '2022-12-02', 2147483647, 'Sonai Morin', ''),
-(5, 'Masuk', '2022-11-29', '2022-12-01', 1029384756, 'Ellyakim Ansek', '');
+(4, 'Masuk', '2022-12-08', '2022-12-02', 2147483647, 'Jane Doe', ''),
+(5, 'Masuk', '2022-11-29', '2022-12-01', 1029384756, 'Jhon Doe', '');
 
 -- --------------------------------------------------------
 
@@ -255,13 +273,13 @@ ALTER TABLE `pembayaran_spp`
 -- AUTO_INCREMENT for table `sarpras`
 --
 ALTER TABLE `sarpras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `surat`

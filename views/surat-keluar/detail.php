@@ -61,7 +61,7 @@
 
                                     <div class="col-lg-8">                                    
                                 
-                                        <iframe src="./assets/surat/keluar/contoh-surat.pdf" width="100%" height="1000px">
+                                        <iframe src="./assets/surat/keluar/<?php echo $rows['surat']; ?>" width="100%" height="1000px">
                                         </iframe>
 
                                     </div>

@@ -23,7 +23,7 @@
 
                     ?>
 
-                    <form action="./process/surat-masuk/ubah.php" method="post">
+                    <form action="./process/surat-masuk/ubah.php" method="post" enctype="multipart/form-data">
                         
 
                         <div class="row">
@@ -59,7 +59,7 @@
         
                                 <div class="mb-3">
                                     <label for="file" class="form-label text-muted">Unggah Surat BARU (*.PDF)</label>
-                                    <input type="file" id="file" class="form-control">
+                                    <input type="file" id="file" name="file" class="form-control">
                                     <small class="text-danger">* Pilih file baru jika ingin ganti surat</small>
                                 </div>
 
