@@ -22,7 +22,7 @@
                                         <th>No</th>
                                         <th>Nama Barang</th>
                                         <th>Jumlah</th>
-                                        <th>Kondisi Baik</th>
+                                        <th>Letak Barang</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -38,7 +38,7 @@
                                         <td><?php echo $i++;  ?></td>
                                         <td><?php echo $row["nama_barang"];  ?></td>
                                         <td><?php echo $row["jumlah"];  ?></td>
-                                        <td><?php echo $row["kondisi"];  ?></td>
+                                        <td><?php echo $row["letak_barang"];  ?></td>
                                         <td>
                                             <a href="?page=sarpras&action=detail&id=<?php echo $row["id"];  ?>" class="btn btn-sm btn-outline-dark"><span data-feather="eye" class="align-text"></span></a>
                                             <a href="?page=sarpras&action=ubah&id=<?php echo $row["id"];  ?>" class="btn btn-sm btn-outline-success"><span data-feather="edit" class="align-text"></span></a>

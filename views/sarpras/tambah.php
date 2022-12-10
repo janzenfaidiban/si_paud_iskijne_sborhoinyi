@@ -19,7 +19,7 @@
 
                         <div class="mb-3">
                             <label for="nama_barang" class="form-label text-muted">Nama Barang</label>
-                            <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Nama Lengkap...">
+                            <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Nama Barang...">
                         </div>
 
                         <div class="mb-3">
@@ -28,8 +28,18 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="kondisi" class="form-label text-muted">Kondisi Baik</label>
-                            <input type="text" class="form-control" id="kondisi" name="kondisi" placeholder="Kondisi Baik">
+                            <label for="kondisi_baik" class="form-label text-muted">Kondisi Baik</label>
+                            <input type="text" class="form-control" id="kondisi_baik" name="kondisi_baik" placeholder="Kondisi Baik">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="kondisi_tidak_baik" class="form-label text-muted">Kondisi Tidak Baik</label>
+                            <input type="text" class="form-control" id="kondisi_tidak_baik" name="kondisi_tidak_baik" placeholder="Kondisi Tidak Baik">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="letak_barang" class="form-label text-muted">Letak Barang</label>
+                            <input type="text" class="form-control" id="letak_barang" name="letak_barang" placeholder="Letak Barang">
                         </div>
 
                         <div class="py-2">

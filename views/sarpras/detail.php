@@ -43,8 +43,18 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="kondisi" class="form-label text-muted">Kondisi Baik</label>
-                                        <p class="fs-6"><?php echo $rows['kondisi']; ?></p>
+                                        <label for="kondisi_baik" class="form-label text-muted">Kondisi Baik</label>
+                                        <p class="fs-6"><?php echo $rows['kondisi_baik']; ?></p>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="kondisi_tidak_baik" class="form-label text-muted">Kondisi Tidak Baik</label>
+                                        <p class="fs-6"><?php echo $rows['kondisi_tidak_baik']; ?></p>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="letak_barang" class="form-label text-muted">Letak Barang</label>
+                                        <p class="fs-6"><?php echo $rows['letak_barang']; ?></p>
                                     </div>
 
                                     <div class="py-2">

@@ -38,8 +38,18 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="kondisi" class="form-label text-muted">Kondisi Baik</label>
-                            <input type="text" class="form-control" id="kondisi" name="kondisi"  value="<?php echo $rows['kondisi']; ?>">
+                            <label for="kondisi_baik" class="form-label text-muted">Kondisi Baik</label>
+                            <input type="text" class="form-control" id="kondisi_baik" name="kondisi_baik"  value="<?php echo $rows['kondisi_baik']; ?>">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="kondisi_tidak_baik" class="form-label text-muted">Kondisi Tidak Baik</label>
+                            <input type="text" class="form-control" id="kondisi_tidak_baik" name="kondisi_tidak_baik"  value="<?php echo $rows['kondisi_tidak_baik']; ?>">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="letak_barang" class="form-label text-muted">Letak Barang</label>
+                            <input type="text" class="form-control" id="letak_barang" name="letak_barang"  value="<?php echo $rows['letak_barang']; ?>">
                         </div>
 
                         <div class="py-2">

@@ -7,7 +7,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "db_ta_paud_2022";
+    $database = "si_paud_iskijne_sborhoinyi";
 
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $database);
