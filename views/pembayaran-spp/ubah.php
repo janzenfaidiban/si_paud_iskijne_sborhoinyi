@@ -47,7 +47,7 @@
 
                         <div class="mb-3">
                             <label for="iuran" class="form-label text-muted">Iuran</label>
-                            <input type="text" class="form-control" id="iuran" name="iuran" value="<?php echo $rows['iuran']; ?>">
+                            <textarea id="iuran" cols="30" rows="5" class="form-control" name="iuran" placeholder="Iuran..."><?php echo $rows['iuran']; ?></textarea>
                         </div>
 
                         <div class="mb-3">

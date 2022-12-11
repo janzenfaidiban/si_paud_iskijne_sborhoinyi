@@ -44,12 +44,12 @@
 
                                     <div class="mb-3">
                                         <label for="penerimaan" class="form-label text-muted">Penerimaan</label>
-                                        <p class="fs-6"><?php echo $rows['penerimaan']; ?></p>
+                                        <p class="fs-6"><?php if($rows["penerimaan"] != ''){echo 'Rp '. number_format($rows["penerimaan"]);} else {echo '-';} ?></p>
                                     </div>                                         
 
                                     <div class="mb-3">
                                         <label for="pengeluaran" class="form-label text-muted">Pengeluaran</label>
-                                        <p class="fs-6"><?php echo $rows['pengeluaran']; ?></p>
+                                        <p class="fs-6"><?php if($rows["pengeluaran"] != ''){echo 'Rp '. number_format($rows["pengeluaran"]);} else {echo '-';} ?></p>
                                     </div>
 
                                     <div class="py-2">

@@ -1,3 +1,5 @@
+
+
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         
@@ -36,13 +38,14 @@
                                         $rows = mysqli_query($conn, "SELECT * FROM buku_kas_umum ORDER BY id DESC");
                                         $i = 1;
                                     ?>
+                                    
                                     <?php foreach ($rows as $row) : ?>
                                     <tr>
                                         <td><?php echo $i++; ?></td>
                                         <td><?php echo $row["tanggal"]; ?></td>
                                         <td><?php echo $row["uraian"]; ?></td>
-                                        <td><?php echo $row["penerimaan"]; ?></td>
-                                        <td><?php echo $row["pengeluaran"]; ?></td>
+                                        <td><?php if($row["penerimaan"] != ''){echo 'Rp '. number_format($row["penerimaan"]);} else {echo '';} ?></td>
+                                        <td><?php if($row["pengeluaran"] != ''){echo 'Rp '. number_format($row["pengeluaran"]);} else {echo '';} ?></td>
                                         <td>
                                             <a href="?page=buku-kas-umum&action=detail&id=<?php echo $row["id"];  ?>" class="btn btn-sm btn-outline-dark"><span data-feather="eye" class="align-text"></span></a>
                                             <a href="?page=buku-kas-umum&action=ubah&id=<?php echo $row["id"];  ?>" class="btn btn-sm btn-outline-success"><span data-feather="edit" class="align-text"></span></a>

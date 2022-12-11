@@ -40,7 +40,7 @@
 
                         <div class="mb-3">
                             <label for="iuran" class="form-label text-muted">Iuran</label>
-                            <input type="text" class="form-control" id="iuran" name="iuran" placeholder="Iuran...">
+                            <textarea id="iuran" cols="30" rows="5" class="form-control" name="iuran" placeholder="Iuran..."></textarea>
                         </div>
 
                         <div class="mb-3">
