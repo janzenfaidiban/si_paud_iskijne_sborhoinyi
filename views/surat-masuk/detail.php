@@ -61,8 +61,6 @@
 
                                     <div class="col-lg-8 text-center">                                    
                                         <?php if(!empty($rows['surat'])) { echo '<iframe src="./surat/masuk/'.$rows['surat'].'" width="100%" height="1000px"></iframe>';} else {echo '<img src="./surat/img-0.png" width="150px">';} ?>
-                                        
-
                                     </div>
 
                                 </div>

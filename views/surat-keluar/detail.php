@@ -60,10 +60,7 @@
                                     </div>
 
                                     <div class="col-lg-8">                                    
-                                
-                                        <iframe src="./assets/surat/keluar/<?php echo $rows['surat']; ?>" width="100%" height="1000px">
-                                        </iframe>
-
+                                        <?php if(!empty($rows['surat'])) { echo '<iframe src="./surat/keluar/'.$rows['surat'].'" width="100%" height="1000px"></iframe>';} else {echo '<img src="./surat/img-0.png" width="150px">';} ?>
                                     </div>
 
                                 </div>
