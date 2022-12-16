@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2022 at 04:02 PM
+-- Generation Time: Dec 11, 2022 at 03:27 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `buku_kas_umum` (
 INSERT INTO `buku_kas_umum` (`id`, `tanggal`, `uraian`, `penerimaan`, `pengeluaran`) VALUES
 (1, '2022-12-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '300000', ''),
 (2, '2022-11-29', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '200000', ''),
-(3, '2022-11-30', 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '', '230000'),
+(3, '2022-11-30', 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '', '3000000'),
 (4, '2023-01-01', 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '600000', '');
 
 -- --------------------------------------------------------
@@ -78,7 +78,7 @@ INSERT INTO `guru` (`id`, `nama_lengkap`, `foto`, `alamat_email`, `nomor_hp`, `a
 CREATE TABLE `pembayaran_spp` (
   `id` int(11) NOT NULL,
   `bulan` enum('Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember') NOT NULL,
-  `iuran` varchar(30) NOT NULL,
+  `iuran` tinytext NOT NULL,
   `tanggal_pembayaran` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -87,10 +87,10 @@ CREATE TABLE `pembayaran_spp` (
 --
 
 INSERT INTO `pembayaran_spp` (`id`, `bulan`, `iuran`, `tanggal_pembayaran`) VALUES
-(2, 'Februari', '600000', '2022-11-02'),
-(3, 'Maret', '55555', '2022-11-30'),
-(4, 'April', '66666', '2022-12-02'),
-(5, 'Januari', 'asdf sadf', '0000-00-00');
+(2, 'Februari', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2022-11-02'),
+(3, 'Maret', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2022-11-30'),
+(4, 'April', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2022-12-02'),
+(5, 'Januari', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2022-12-11');
 
 -- --------------------------------------------------------
 
@@ -166,19 +166,21 @@ CREATE TABLE `surat` (
   `tanggal_surat` date NOT NULL,
   `nomor_surat` int(30) NOT NULL,
   `pengirim` varchar(100) NOT NULL,
-  `tujuan` varchar(100) NOT NULL
+  `tujuan` varchar(100) NOT NULL,
+  `surat` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `surat`
 --
 
-INSERT INTO `surat` (`id`, `jenis_surat`, `tanggal_diterima`, `tanggal_surat`, `nomor_surat`, `pengirim`, `tujuan`) VALUES
-(1, 'Keluar', '2022-12-01', '2022-12-01', 1234567890, 'Janzen Faidiban', 'Theis A.'),
-(2, 'Keluar', '2022-12-01', '2022-12-01', 1234567890, 'Michael Faidiban', 'Johan N.'),
-(3, 'Keluar', '2022-12-01', '2022-12-01', 1029384756, 'Samuel Bosawer', 'Samuel B.'),
-(4, 'Masuk', '2022-12-08', '2022-12-02', 2147483647, 'Jane Doe', ''),
-(5, 'Masuk', '2022-11-29', '2022-12-01', 1029384756, 'Jhon Doe', '');
+INSERT INTO `surat` (`id`, `jenis_surat`, `tanggal_diterima`, `tanggal_surat`, `nomor_surat`, `pengirim`, `tujuan`, `surat`) VALUES
+(1, 'Keluar', '2022-12-01', '2022-12-01', 1234567890, 'Janzen Faidiban', 'Jhon Doe', ''),
+(2, 'Keluar', '2022-12-01', '2022-12-01', 1234567890, 'Michael Faidiban', 'Jane Doe', ''),
+(3, 'Keluar', '2022-12-01', '2022-12-01', 1029384756, '', 'Jhon Doe', 'surat-keluar-1670766537-.pdf'),
+(4, 'Masuk', '2022-12-08', '2022-12-02', 2147483647, 'Jane Doe', '', ''),
+(5, 'Masuk', '2022-11-29', '2022-12-01', 1029384756, 'Jhon Doe', '', 'surat-masuk-1670766306-.pdf'),
+(6, 'Keluar', '2022-12-05', '2022-12-06', 1029384756, '', 'Jhon Doe', 'surat-keluar-1670766515-.pdf');
 
 -- --------------------------------------------------------
 
@@ -285,7 +287,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `surat`
 --
 ALTER TABLE `surat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`

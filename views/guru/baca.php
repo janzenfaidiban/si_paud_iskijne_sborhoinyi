@@ -3,10 +3,14 @@
         <h1 class="h2 fw-bold">Guru</h1>
 
         <div class="btn-toolbar mb-2 mb-md-0">
+            <a href="./cetak/?data=guru" target="_blank" class="btn btn-sm btn-outline-dark me-2">
+                <span data-feather="printer" class="align-text"></span> Cetak
+            </a>
             <a href="?page=guru&action=tambah" class="btn btn-sm btn-dark">
                 <span data-feather="plus-square" class="align-text"></span> Tambah
             </a>
         </div>
+
     </div>
 
     <div class="row">

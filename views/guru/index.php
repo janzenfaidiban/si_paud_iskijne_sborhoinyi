@@ -11,6 +11,10 @@
     elseif(isset($_GET['action']) && $_GET['action'] == 'ubah') {
         include __DIR__ . '../../../views/guru/ubah.php';
     }
+
+    elseif(isset($_GET['action']) && $_GET['action'] == 'cetak') {
+        include __DIR__ . '../../../views/guru/cetak.php';
+    }
     
     else {
         include __DIR__ . '../../../views/guru/baca.php';
