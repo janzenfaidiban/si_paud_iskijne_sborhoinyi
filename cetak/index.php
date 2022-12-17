@@ -20,7 +20,7 @@
 
     } elseif(isset($_GET['data']) && $_GET['data'] == 'sarpras'){
         
-        include __DIR__ . '../../views/siswa/cetak.php';
+        include __DIR__ . '../../views/sarpras/cetak.php';
 
     } elseif(isset($_GET['data']) && $_GET['data'] == 'surat-masuk'){
         
