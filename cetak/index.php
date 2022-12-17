@@ -28,7 +28,7 @@
 
     } elseif(isset($_GET['data']) && $_GET['data'] == 'surat-keluar'){
         
-        include __DIR__ . '../../views/surat-keluarga/cetak.php';
+        include __DIR__ . '../../views/surat-keluar/cetak.php';
 
     } elseif(isset($_GET['data']) && $_GET['data'] == 'pembayaran-spp'){
         
