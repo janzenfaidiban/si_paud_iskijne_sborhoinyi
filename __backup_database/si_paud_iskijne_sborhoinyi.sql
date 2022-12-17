@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2022 at 03:27 PM
+-- Generation Time: Dec 17, 2022 at 04:28 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -40,7 +40,6 @@ CREATE TABLE `buku_kas_umum` (
 --
 
 INSERT INTO `buku_kas_umum` (`id`, `tanggal`, `uraian`, `penerimaan`, `pengeluaran`) VALUES
-(1, '2022-12-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '300000', ''),
 (2, '2022-11-29', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '200000', ''),
 (3, '2022-11-30', 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '', '3000000'),
 (4, '2023-01-01', 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '600000', '');
@@ -67,7 +66,7 @@ CREATE TABLE `guru` (
 INSERT INTO `guru` (`id`, `nama_lengkap`, `foto`, `alamat_email`, `nomor_hp`, `alamat_lengkap`) VALUES
 (167, 'Yuli Wambrauw', '1669972118-yuliwambrauw.jpg', 'yuliwambrauw@gmail.com', '', 'Lembah Furia Kotaraja Dalam'),
 (168, 'Dessy Weldensya', '1669972161-dessyweldensya.jpg', 'dessyweldensya@gmail.com ', '', 'Lembah Furia Kotaraja Dalam'),
-(169, 'Martha Inggeni', '1669972181-marthainggeni.jpg', 'marthainggeni@gmail.com ', '', 'Lembah Furia Kotaraja Dalam');
+(169, 'Martha Inggeni', '1669972181-marthainggeni.jpg', 'marthainggeni@gmail.com ', '+62 821 9944 77', 'Lembah Furia Kotaraja Dalam');
 
 -- --------------------------------------------------------
 

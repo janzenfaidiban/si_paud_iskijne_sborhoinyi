@@ -1,4 +1,6 @@
-
+<div class="container-fluid">
+    
+    <h1 class="fs-2">Rekapan Siswa</h1>
 
     <table id="example" class="table table-bordered" style="width:100%">
         <thead>
@@ -30,3 +32,5 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+
+</div>
