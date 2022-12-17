@@ -3,6 +3,9 @@
         <h1 class="h2 fw-bold">Siswa</h1>
 
         <div class="btn-toolbar mb-2 mb-md-0">
+            <a href="./cetak/?data=siswa" target="_blank" class="btn btn-sm btn-outline-dark me-2">
+                <span data-feather="printer" class="align-text"></span> Cetak
+            </a>
             <a href="?page=siswa&action=tambah" class="btn btn-sm btn-dark">
                 <span data-feather="plus-square" class="align-text"></span> Tambah
             </a>
